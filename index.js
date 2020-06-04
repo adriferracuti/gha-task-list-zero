@@ -26,7 +26,7 @@ module.exports = robot => {
           description: isUnChecked
             ? "Not yet completed"
             : "Completed",
-          context: "Task List"
+          context: "PR Tasks"
         })
       );
     }
