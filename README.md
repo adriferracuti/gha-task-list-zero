@@ -5,7 +5,7 @@ This action checks if the tasks (checkboxes) listed inside the PR description ar
 # How to add
 
 ```
-- uses: adriferracuti/gha-task-list-zero@2.0
+- uses: adriferracuti/gha-task-list-zero@2.0.0
   env:
     GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 ```
@@ -23,7 +23,7 @@ jobs:
     name: Comments checks
     runs-on: ubuntu-18.04
     steps:
-      - uses: adriferracuti/gha-task-list-zero@dev-0.2
+      - uses: adriferracuti/gha-task-list-zero@2.0.0
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 ```
