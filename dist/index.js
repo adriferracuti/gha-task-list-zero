@@ -47219,22 +47219,11 @@ module.exports = robot => {
           .html_url}): ${status}`
       );
 
-      robot.log('ver1');
-
       robot.log(`isUnchecked: ${isUnChecked}`);
 
-      // context.github.repos.createStatus(
-      //   context.repo({
-      //     sha: context.payload.pull_request.head.sha,
-      //     state: status,
-      //     description: isUnChecked
-      //       ? "Not yet completed"
-      //       : "Completed",
-      //     context: "PR Tasks"
-      //   })
-      // );
-
-    core.setFailed('failed');
+      if (isUnChecked) {
+          core.setFailed('Task list not empty');
+      }
     }
   );
 };
