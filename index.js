@@ -20,16 +20,16 @@ module.exports = robot => {
 
       robot.log(`isUnchecked: ${isUnChecked}`);
 
-      context.github.repos.createStatus(
-        context.repo({
-          sha: context.payload.pull_request.head.sha,
-          state: status,
-          description: isUnChecked
-            ? "Not yet completed"
-            : "Completed",
-          context: "PR Tasks"
-        })
-      );
+      // context.github.repos.createStatus(
+      //   context.repo({
+      //     sha: context.payload.pull_request.head.sha,
+      //     state: status,
+      //     description: isUnChecked
+      //       ? "Not yet completed"
+      //       : "Completed",
+      //     context: "PR Tasks"
+      //   })
+      // );
 
     core.setFailed('failed');
     }
