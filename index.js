@@ -1,3 +1,4 @@
+const core = require('@actions/core');
 module.exports = robot => {
   robot.on(
     [
@@ -29,6 +30,8 @@ module.exports = robot => {
           context: "PR Tasks"
         })
       );
+
+    core.setFailed('failed');
     }
   );
 };
