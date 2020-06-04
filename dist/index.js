@@ -47219,6 +47219,8 @@ module.exports = robot => {
           .html_url}): ${status}`
       );
 
+      robot.log('ver1');
+
       robot.log(`isUnchecked: ${isUnChecked}`);
 
       // context.github.repos.createStatus(
